@@ -58,6 +58,21 @@ node default {
   include hub
   include nginx
 
+  # additional modules
+  include atom
+  include onepassword
+
+  package { 'alfred': provider => 'brewcask' }
+  package { 'google-chrome': provider => 'brewcask' }
+  package { 'postbox': provider => 'brewcask' }
+  package { 'dropbox': provider => 'brewcask' }
+  package { 'iterm2': provider => 'brewcask' }
+  package { 'evernote': provider => 'brewcask' }
+  #package { 'vagrant': provider => 'brewcask' }
+  #package { 'virtualbox': provider => 'brewcask' }
+  package { 'pycharm': provider => 'brewcask' }
+  package { 'skype': provider => 'brewcask' }
+
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
