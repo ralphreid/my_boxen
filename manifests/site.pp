@@ -59,8 +59,11 @@ node default {
   include nginx
 
   # additional modules
-  include atom
   include onepassword
+
+  include atom
+  atom::package { 'linter': }
+  atom::theme { 'monokai': }
 
   package { 'alfred': provider => 'brewcask' }
   package { 'google-chrome': provider => 'brewcask' }
