@@ -42,7 +42,6 @@ github "brewcask",    "0.0.6"
 github "dnsmasq",     "2.0.1"
 github "foreman",     "1.2.0"
 github "gcc",         "3.0.2"
-github "git",         "2.7.92"
 github "go",          "2.1.0"
 github "homebrew",    "1.13.0"
 github "hub",         "1.4.1"
@@ -56,6 +55,14 @@ github "ruby",        "8.5.3"
 github "stdlib",      "4.7.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
+
+github "git",         "2.7.92"
+git::config::global { 'user.email':
+  value  => 'beresfordjunior@me.com'
+}
+git::config::global { 'user.name':
+  value  => 'Ralph Reid'
+}
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
