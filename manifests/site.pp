@@ -72,7 +72,6 @@ node default {
   atom::package { 'markdown-format': }
   atom::package { 'linter-markdown': }
   atom::package { 'markdown-scroll-sync': }
-  atom::package { 'markdown-pdf': }
   atom::package { 'markdown-helpers': }
   atom::theme { 'monokai': }
 
