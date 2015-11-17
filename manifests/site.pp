@@ -63,6 +63,17 @@ node default {
 
   include atom
   atom::package { 'linter': }
+  atom::package { 'markdown-pdf': }
+  atom::package { 'markdown-preview': }
+  atom::package { 'markdown-sort-list': }
+  atom::package { 'markdown-preview-opener': }
+  atom::package { 'markdown-table-formatter': }
+  atom::package { 'tidy-markdown': }
+  atom::package { 'markdown-format': }
+  atom::package { 'linter-markdown': }
+  atom::package { 'markdown-scroll-sync': }
+  atom::package { 'markdown-pdf': }
+  atom::package { 'markdown-helpers': }
   atom::theme { 'monokai': }
 
   #configure git
