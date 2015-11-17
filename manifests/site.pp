@@ -65,16 +65,24 @@ node default {
   atom::package { 'linter': }
   atom::theme { 'monokai': }
 
+  #configure git
+  git::config::global { 'user.email':
+    value  => 'beresfordjunior@me.com'
+  }
+  git::config::global { 'user.name':
+    value  => 'Ralph Reid'
+  }
+
   package { 'alfred': provider => 'brewcask' }
   package { 'google-chrome': provider => 'brewcask' }
   package { 'postbox': provider => 'brewcask' }
   package { 'dropbox': provider => 'brewcask' }
   package { 'iterm2': provider => 'brewcask' }
   package { 'evernote': provider => 'brewcask' }
-  #package { 'vagrant': provider => 'brewcask' }
-  #package { 'virtualbox': provider => 'brewcask' }
   package { 'pycharm': provider => 'brewcask' }
   package { 'skype': provider => 'brewcask' }
+  package { 'hipchat': provider => 'brewcask' }
+  package { 'paw': provider => 'brewcask' }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {

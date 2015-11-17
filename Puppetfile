@@ -55,14 +55,7 @@ github "ruby",        "8.5.3"
 github "stdlib",      "4.7.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",        "1.0.0"
 github "xquartz",     "1.2.1"
-
 github "git",         "2.7.92"
-git::config::global { 'user.email':
-  value  => 'beresfordjunior@me.com'
-}
-git::config::global { 'user.name':
-  value  => 'Ralph Reid'
-}
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
