@@ -93,7 +93,7 @@ node default {
   package { 'hipchat': provider => 'brewcask' }
   package { 'paw': provider => 'brewcask' }
 
-  package { 'bro': provider => 'homebrew'}
+  package { 'bropages': provider => 'gem'}
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
