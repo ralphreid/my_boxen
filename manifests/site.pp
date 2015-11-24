@@ -93,10 +93,15 @@ node default {
       'pycharm',
       'skype',
       'hipchat',
+      'slack',
     ]: provider => 'brewcask'
   }
 
   package { 'bropages': provider => 'gem'}
+
+  class { 'vagrant':
+    completion => true,
+  }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
