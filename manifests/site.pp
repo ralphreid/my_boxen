@@ -94,6 +94,7 @@ node default {
       'skype',
       'hipchat',
       'slack',
+      'alfred',
     ]: provider => 'brewcask'
   }
 
