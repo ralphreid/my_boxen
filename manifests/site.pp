@@ -77,7 +77,6 @@ node default {
       'linter-markdown',
       'markdown-scroll-sync',
       'markdown-helpers',
-      'multi-cursor',
     ]:
   }
 
