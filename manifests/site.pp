@@ -103,17 +103,12 @@ node default {
       'slack',
       'alfred',
       'vagrant-manager',
-      'virtualbox',
     ]: provider => 'brewcask'
   }
 
-  package { 'bropages': provider => 'gem'}
+  package { 'bropages': provider => 'gem' }
 
   class { 'vagrant': }
-
-  vagrant::box { 'puppetlabs/centos-7.0-64-puppet':
-    source => 'https://atlas.hashicorp.com/puppetlabs/boxes/centos-7.0-64-puppet'
-  }
 
   vagrant::plugin { 'r10k': }
 
