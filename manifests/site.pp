@@ -67,7 +67,6 @@ node default {
     [
       'linter',
       'markdown-pdf',
-      'iterm2',
       'multi-cursor',
       'markdown-preview',
       'markdown-sort-list',
