@@ -62,16 +62,25 @@ node default {
   include onepassword
 
   include atom
-  atom::package { 'linter': }
-  atom::package { 'markdown-pdf': }
-  atom::package { 'markdown-preview': }
-  atom::package { 'markdown-sort-list': }
-  atom::package { 'markdown-preview-opener': }
-  atom::package { 'markdown-table-formatter': }
-  atom::package { 'markdown-format': }
-  atom::package { 'linter-markdown': }
-  atom::package { 'markdown-scroll-sync': }
-  atom::package { 'markdown-helpers': }
+
+  atom::package {
+    [
+      'linter',
+      'markdown-pdf',
+      'iterm2',
+      'multi-cursor',
+      'markdown-preview',
+      'markdown-sort-list',
+      'markdown-preview-opener',
+      'markdown-table-formatter',
+      'markdown-format',
+      'linter-markdown',
+      'markdown-scroll-sync',
+      'markdown-helpers',
+      'multi-cursor',
+    ]:
+  }
+
   atom::theme { 'monokai': }
 
   #configure git
@@ -95,14 +104,20 @@ node default {
       'hipchat',
       'slack',
       'alfred',
+      'vagrant-manager',
+      'virtualbox',
     ]: provider => 'brewcask'
   }
 
   package { 'bropages': provider => 'gem'}
 
-  class { 'vagrant':
-    completion => true,
+  class { 'vagrant': }
+
+  vagrant::box { 'puppetlabs/centos-7.0-64-puppet':
+    source => 'https://atlas.hashicorp.com/puppetlabs/boxes/centos-7.0-64-puppet'
   }
+
+  vagrant::plugin { 'r10k' }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
