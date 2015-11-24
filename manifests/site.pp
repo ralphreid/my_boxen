@@ -82,16 +82,19 @@ node default {
     value  => 'Ralph Reid'
   }
 
-  package { 'alfred': provider => 'brewcask' }
-  package { 'google-chrome': provider => 'brewcask' }
-  package { 'postbox': provider => 'brewcask' }
-  package { 'dropbox': provider => 'brewcask' }
-  package { 'iterm2': provider => 'brewcask' }
-  package { 'evernote': provider => 'brewcask' }
-  package { 'pycharm': provider => 'brewcask' }
-  package { 'skype': provider => 'brewcask' }
-  package { 'hipchat': provider => 'brewcask' }
-  package { 'paw': provider => 'brewcask' }
+  package {
+    [
+      'paw',
+      'google-chrome',
+      'postbox',
+      'dropbox',
+      'iterm2',
+      'evernote',
+      'pycharm',
+      'skype',
+      'hipchat',
+    ]: provider => 'brewcask'
+  }
 
   package { 'bropages': provider => 'gem'}
 
