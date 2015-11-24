@@ -117,7 +117,7 @@ node default {
     source => 'https://atlas.hashicorp.com/puppetlabs/boxes/centos-7.0-64-puppet'
   }
 
-  vagrant::plugin { 'r10k' }
+  vagrant::plugin { 'r10k': }
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
