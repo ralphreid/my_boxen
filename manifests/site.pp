@@ -106,8 +106,6 @@ node default {
     ]: provider => 'brewcask'
   }
 
-  package { 'bropages': provider => 'gem' }
-
   class { 'vagrant': }
 
   vagrant::plugin { 'r10k': }
@@ -127,6 +125,18 @@ node default {
   ruby::version { '2.0.0': }
   ruby::version { '2.1.7': }
   ruby::version { '2.2.3': }
+
+  # Set the global default ruby (auto-installs it if it can)
+  class { 'ruby::global':
+    version => '2.2.3'
+  }
+
+  # ensure a gem is installed for all ruby versions
+  ruby_gem { 'bropages for all rubies':
+    gem          => 'bropages',
+    version      => '0.1.0',
+    ruby_version => '*',
+  }
 
   # common, useful packages
   package {
