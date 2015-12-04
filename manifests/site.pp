@@ -103,6 +103,7 @@ node default {
       'slack',
       'alfred',
       'vagrant-manager',
+      'kindle',
     ]: provider => 'brewcask'
   }
 
