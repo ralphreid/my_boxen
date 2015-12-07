@@ -135,7 +135,7 @@ node default {
   # ensure a gem is installed for all ruby versions
   ruby_gem { 'bropages for all rubies':
     gem          => 'bropages',
-    version      => '0.1.0',
+    version      => '~> 0.1.0',
     ruby_version => '*',
   }
 
