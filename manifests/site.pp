@@ -59,7 +59,6 @@ node default {
   include nginx
 
   # additional modules
-  include onepassword
 
   include atom
 
@@ -101,7 +100,6 @@ node default {
       'skype',
       'hipchat',
       'slack',
-      'alfred',
       'vagrant-manager',
       'kindle',
     ]: provider => 'brewcask'

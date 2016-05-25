@@ -59,11 +59,6 @@ GITHUBTARBALL
     nodejs (5.0.0)
 
 GITHUBTARBALL
-  remote: boxen/puppet-onepassword
-  specs:
-    onepassword (1.1.5)
-
-GITHUBTARBALL
   remote: boxen/puppet-openssl
   specs:
     openssl (1.0.0)
@@ -96,7 +91,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
-    vagrant (3.3.3)
+    vagrant (3.3.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-xquartz
@@ -133,7 +128,6 @@ DEPENDENCIES
   module_data (= 0.0.4)
   nginx (= 1.7.0)
   nodejs (= 5.0.0)
-  onepassword (= 1.1.5)
   openssl (= 1.0.0)
   phantomjs (= 3.0.0)
   pkgconfig (= 1.0.0)
@@ -141,6 +135,6 @@ DEPENDENCIES
   ruby (= 8.5.4)
   stdlib (= 4.7.0)
   sudo (= 1.0.0)
-  vagrant (= 3.3.3)
+  vagrant (= 3.3.4)
   xquartz (= 1.2.1)
 
