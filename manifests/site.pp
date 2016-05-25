@@ -108,6 +108,7 @@ node default {
   class { 'vagrant': }
 
   vagrant::plugin { 'r10k': }
+  vagrant::plugin { 'omnibus': } #avoid errors with chef
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -137,12 +138,13 @@ node default {
     ruby_version => '*',
   }
 
-  # common, useful packages
+  # common, useful packages installed via homebrew provider
   package {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'keychain',
     ]:
   }
 
